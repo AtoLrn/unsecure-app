@@ -47,4 +47,4 @@ services:
       - "9090:5000"
     volumes:
       - ./public:/home/unsecure/public:ro
-      - ./.docker/local/apache/apache.conf:/etc/apache2/apache.conf:ro
+      - ./.docker/local/apache/apache.conf:/usr/local/apache2/conf/httpd.conf:ro
