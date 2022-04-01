@@ -26,8 +26,8 @@ class AuthController extends Controller
 
     $user = $mysql->select('users', '*', ['name' => $request->username]);
 
-
-    if(isset($user[0]) && $user[0]['password'] === md5($request->password)){
+    
+    if(isset($user[0]) && password_verify($request->password, $user[0]['password'] )){
       \Auth::loginUsingId($user[0]['id']);
       return redirect()->route('admin.index')->withCookie(cookie('id', $user[0]['id'], 3600000));
     }

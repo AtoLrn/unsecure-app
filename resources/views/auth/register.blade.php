@@ -4,6 +4,7 @@
 @section('content')
   <h1> Connexion </h1>
   <form method="GET" action="{{ route('login.validation') }}">
+  @csrf
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Adresse email</label>
       <input type="text" class="form-control" name="email" placeholder="admin@example.com">

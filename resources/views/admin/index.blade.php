@@ -6,6 +6,7 @@
 
   <p> Add a new article </p>
   <form method="POST" action="{{ route('admin.article.add') }}">
+  @csrf
     <label>Title :</label>
     <input type="text" name="title" />
     <label>Content :</label>

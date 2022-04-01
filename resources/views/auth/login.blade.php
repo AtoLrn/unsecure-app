@@ -3,7 +3,8 @@
 
 @section('content')
   <h1> Connexion </h1>
-  <form method="GET" action="{{ route('login.validation') }}">
+  <form method="POST" action="{{ route('login.validation') }}">
+  @csrf
     @error('login')
         <div class="alert alert-danger">{{ $message }}</div>
     @enderror

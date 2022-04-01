@@ -25,7 +25,7 @@ Route::get('/logout', [ AuthController::class, 'logout'])->name('logout');
 
 Route::middleware('guest')->group(function() {
   Route::get('/login', [ AuthController::class, 'login' ])->name('login');
-  Route::get('/login/validated', [ AuthController::class, 'loginValidation' ])->name('login.validation');
+  Route::post('/login/validated', [ AuthController::class, 'loginValidation' ])->name('login.validation');
 });
 
 Route::middleware('auth')->group(function() {

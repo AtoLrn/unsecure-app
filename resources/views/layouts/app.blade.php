@@ -48,6 +48,7 @@
                   @endif
                 </ul>
                 <form class="d-flex" method="POST" action="{{ route('article.search') }}">
+                @csrf
                   <input class="form-control me-2" type="search" name="search" placeholder="Chercher un article" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Chercher</button>
                 </form>
