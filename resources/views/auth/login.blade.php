@@ -14,7 +14,7 @@
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Mot de passe</label>
-      <input type="text" class="form-control" name="password" placeholder="Mot de passe" autocomplete="off">
+      <input type="password" class="form-control" name="password" placeholder="Mot de passe" autocomplete="off">
     </div>
     <button type="submit" class="btn btn-primary">Se connecter</button>
 
